@@ -101,5 +101,24 @@ gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh
 # xmonad related, but it's handy if you're a vim user.
 setxkbmap -option 'ctrl:nocaps'
 
+#
+# TOUCHPAD CONFIGURATION
+#
+
+# Click with 2 fingers: right click
+synclient TapButton1=0 TapButton2=0 TapButton3=2 ClickFinger1=0 ClickFinger2=3
+
+# Natural scrolling
+synclient VertScrollDelta=-111 HorizScrollDelta=-111
+
+# Faster touchpad pointer
+synclient MinSpeed=1.2 AccelFactor=0.05
+
+# No action on corners
+synclient RTCornerButton=0 RBCornerButton=0
+
+# No accidental and weird movements
+synclient TapAndDragGesture=off PalmDetect=on
+
 # Now, finally, start xmonad
 exec xmonad
